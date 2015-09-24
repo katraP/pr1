@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width"/>
+    <title>SuperiorPapers.com | Home</title>
+    <link rel="stylesheet" href="stylesheets/main.css"/>
+    <!--[if IE 8 ]><link rel="stylesheet" href="stylesheets/ie8.css"/><![endif]-->
+    <link rel="stylesheet" href="stylesheets/thankyou.css"/>
+    <script src="js/jquery1.10.js"></script>
+    <script src="js/jquery.bxslider.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/animation.js"></script>
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+</head>
+<body>
+<div class="header">
+    <div class="container clearfix header-contacts">
+        <div class="menu-toggle">
+            <span class="menu-toggle__line">&nbsp;</span>
+        </div>
+        <a href="#">
+            <img alt="SuperiorPapers.com" src="img/logo.png" class="logo tablet-hide"/>
+            <img alt="SuperiorPapers.com" src="img/logo_tablet.png" class="logo tablet-visible"/>
+        </a>
+        <div class="buttons">
+            <a href="#" class="login"><span class="tablet-hide">Login</span></a>
+            <a href="#" class="chat">Live Chat</a>
+            <div class="login-popup">
+                <form action="" method="post">
+                    <div class="login-inner">
+                        <input name="email" type="text" placeholder="Login (Email)" />
+                        <input name="pass" type="password" placeholder="&#9679;&#9679;&#9679;&#9679;&#9679;" />
+                        <div class="button blue">
+                            <a href="#">ENTER</a>
+                        </div>
+                        <a class="forgot" href="#">forgot password?</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="phones">
+            <span class="us">1-888-369-5603</span>
+            <span class="uk">44-20-7183-0318</span>
+            <span class="au">61-28-014-8214</span>
+        </div>
+
+    </div>
+    <div class="top_menu inactive">
+        <div class="container">
+            <ul class="navigation clearfix">
+                <li class="l1"><a href="#">Home</a></li>
+                <li class="l2"><a href="#">Services</a></li>
+                <li class="l3"><a href="#">Prices</a></li>
+                <li class="l4"><a href="#">Discounts</a></li>
+                <li class="desktop l6"><a href="#">Samples</a></li>
+                <li class="desktop l7"><a href="#">FAQ</a></li>
+                <li class="desktop l8"><a href="#">About us</a></li>
+                <li class="desktop l9"><a href="#">Contacts</a></li>
+                <li class="order l10"><a href="#">ORDER NOW</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="s-content thankyou">
+    <div class="container clearfix">
+        <h2 class="thankyou__title">Thank you, Barak Obama!</h2>
+        <div class="thankyou__title-text">
+            Your Successfully placed your order!
+        </div>
+        <div class="thankyou-block">
+
+            <script type="text/javascript">
+                $(function(){
+                    var min = 5,
+                            sec1 = 0,
+                            sec2 = 0,
+                            minAct = false,
+                            sec1Act = false,
+                            sec2Act = false;
+                    function countDown() {
+                        var container = $('.countdown-counter');
+                        if(min == 0) {
+                           if(sec1 == 0) {
+                               if(sec2 != 0) {
+                                   sec2--;
+                                   sec2Act = true;
+                               }
+                               else {
+                                   clearInterval(id);
+                               }
+                           }
+                           else {
+                               if(sec2==0) {
+                                   sec2=9;
+                                   sec1--;
+                                   sec1Act = true;
+                                   sec2Act = true;
+                               }
+                               else {
+                                   sec2--;
+                                   sec2Act = true;
+                               }
+                           }
+                        }
+                        else {
+                            if(sec1 == 0) {
+                                if(sec2 != 0) {
+                                    sec2--;
+                                    sec2Act = true;
+                                }
+                                else {
+                                    min--;
+                                    sec1 = 5;
+                                    sec2 = 9;
+                                    minAct = true;
+                                    sec1Act = true;
+                                    sec2Act = true;
+                                }
+                            }
+                            else {
+                                if(sec2==0) {
+                                    sec2=9;
+                                    sec1--;
+                                    sec1Act = true;
+                                    sec2Act = true;
+                                }
+                                else {
+                                    sec2--;
+                                    sec2Act = true;
+                                }
+                            }
+                        }
+                        container.find('.active').removeClass('active').removeClass('current').addClass('hide');
+                        container.find('.min .hide').text(min).end()
+                                .find('.sec1 .hide').text(sec1).end()
+                                .find('.sec2 .hide').text(sec2).end();
+                        if(sec2Act == true) {
+                            container.find('.sec2').find('.current').addClass('active').end().find('.hide').addClass('current').removeClass('hide');
+                            sec2Act = false;
+                        }
+                        if(sec1Act == true) {
+                            container.find('.sec1').find('.current').addClass('active').end().find('.hide').addClass('current').removeClass('hide');
+                            sec1Act = false;
+                        }
+                        if(minAct == true) {
+                            container.find('.min').find('.current').addClass('active').end().find('.hide').addClass('current').removeClass('hide');
+                            minAct = false;
+                        }
+                    }
+                    var id = setInterval(function(){
+                        countDown();
+                    }, 1000);
+                });
+            </script>
+            <div class="thankyou-features">
+                <span class="thankyou-features__title">
+                    Select <span class="text--red">helpful extras</span> below and add them to your order:
+                </span>
+                <span class="countdown-counter">
+                    <span class="min">
+                        <span class="current">5</span>
+                        <span class="hide">4</span>
+                    </span>
+                    <span class="separator">:</span>
+                    <span class="sec1">
+                        <span class="current">0</span>
+                        <span class="hide">5</span>
+                    </span>
+                    <span class="sec2">
+                        <span class="current">0</span>
+                        <span class="hide">9</span>
+                    </span>
+                </span>
+                <div class="thankyou-features-block">
+                    <div class="featured-offer-item">
+                        <div class="fo-header">
+                            <p class="foh-head">
+                                Proofread by editor					</p>
+                            <div class="foh-price">
+                                <label class="feature__checkbox">
+                                    <input id="additional_152" name="additional[152]" type="checkbox" value="additional[152]" size="1">
+                                </label>
+                                <label class="uncheckinp" for="additional_152" id="additional_152_price">$5.75</label>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="featured-offer-item even">
+                        <div class="fo-header">
+                            <p class="foh-head">
+                                Order done by a UK writer					</p>
+                            <div class="foh-price">
+                                <label class="feature__checkbox">
+                                    <input id="additional_142" name="additional[142]" type="checkbox" value="additional[142]" size="1">
+                                </label>
+                                <label class="uncheckinp" for="additional_142" id="additional_142_price">$1.15</label>
+                                <div class="clearer"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="featured-offer-item">
+                        <div class="fo-header">
+                            <p class="foh-head">
+                                VIP Service package
+                            </p>
+                            <div class="foh-price">
+                                <label class="feature__checkbox">
+                                    <input id="additional_151" name="additional[151]" type="checkbox" value="additional[151]" size="1">
+                                </label>
+                                <label class="uncheckinp" for="additional_151" id="additional_151_price">$14.84</label>
+                                <div class="clearer"></div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="thankyou-total">
+                    Total: <span class="thankyou-total__price">$15.25</span>
+                </div>
+                <div class="button-block">
+                    <a href="#" class="button--green thankyou__button">Add to my order</a>
+                </div>
+            </div>
+            <div class="thankyou-info">
+                <div class="thankyou-summary">
+                    <div class="thankyou-summary__title">
+                        Order summary
+                    </div>
+                    <ul class="thankyou-summary-list">
+                        <li class="thankyou-summary__item">
+                            <span class="text--bolder">ID</span> 0637955575
+                        </li>
+                        <li class="thankyou-summary__item">
+                            Deadline: Saturday, December 2th, 2015 21:10 (GTM +2)
+                        </li>
+                        <li class="thankyou-summary__item">
+                            <span class="text--bolder">Total price:</span>
+                            <span class="thankyou-summary__price">$144.52</span>
+                        </li>
+                    </ul>
+                </div>
+                <ul class="s-content-notes">
+                    <li class="s-content-notes__item">
+                        Your card statement will reflect a charge under the name “Writing Service Uniwork Inc”
+                    </li>
+                    <li class="s-content-notes__item">
+                        A confirmation e-mail with order details and useful options was sent to
+                        <a href="mailto:barak.obama@gmail.com" class="link--general">barak.obama@gmail.com</a>.
+                        Your order is now available to our writers and we start working with it rigth away.
+                    </li>
+                </ul>
+                <div class="thankyou-attach">
+                    <a href="#" class="thankyou-attach__link">
+                        Attach files to order
+                    </a>
+                </div>
+                <div class="button-block">
+                    <a href="#" class="button__thankyou button--blue">View <span class="text--bolder">Order Details</span></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="footer">
+    <div class="container">
+        <div class="footMenu">
+            <a href="#policy">Privacy policy</a>
+            <a href="#terms">Terms and Conditions</a>
+            <a href="#promise">Our Promise</a>
+            <a href="#sitemap">Sitemap</a>
+            <a href="#contacts">Contacts</a>
+        </div>
+        <div class="fInner">
+            <div class="socials">
+                <iframe class="fbButton" src="http://www.facebook.com/plugins/like.php?locale=en_US&amp;href=http%3A%2F%2Fwww.superiorpapers.com%2F&amp;width&amp;layout=button_count&amp;action=like&amp;show_faces=true&amp;share=false&amp;height=21" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+                <div class="g-plusone" data-size="medium" data-href="http://www.superiorpapers.com/"></div>
+            </div>
+            <img src="img/cards.png" class="payments mobile-hide" alt="All payments are securely processed by Authorize.Net, Security Metrics: Credit Card SAFE, VISA, MasterCard, Discover, Maestro, American Express, Wire Transfer">
+            <img src="img/cards_mobile.png" class="payments mobile-visible" alt="All payments are securely processed by Authorize.Net, Security Metrics: Credit Card SAFE, VISA, MasterCard, Discover, Maestro, American Express, Wire Transfer">
+            <div class="disclaimer">
+                DISCLAMER: The company is providing custom writing and research services to its clients for limited use only as provided its Term and Conditions. Itdoes not give its consent or authority to the client to copry and reproduse entirely or a portion of any term paper, research paper, thesis, essay, dissertation or other products of the Company without proper reference. Furthermore, the Company will not be responsible to third parties for the unauthorized use of its produst.
+                <div class="copy">Copyright 1997-2014 <span>SuperiorPapers.com</span></div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

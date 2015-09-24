@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width"/>
+    <title>SuperiorPapers.com | Home</title>
+    <link rel="stylesheet" href="stylesheets/main.css"/>
+    <!--[if IE 8 ]><link rel="stylesheet" href="stylesheets/ie8.css"/><![endif]-->
+    <link rel="stylesheet" href="stylesheets/profile.css"/>
+    <script src="js/jquery1.10.js"></script>
+    <script src="js/main.js"></script>
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+</head>
+<body>
+<div class="header">
+    <div class="container clearfix header-contacts">
+        <div class="menu-toggle">
+            <span class="menu-toggle__line">&nbsp;</span>
+        </div>
+        <a href="#">
+            <img alt="SuperiorPapers.com" src="img/logo.png" class="logo tablet-hide"/>
+            <img alt="SuperiorPapers.com" src="img/logo_tablet.png" class="logo tablet-visible"/>
+        </a>
+        <div class="buttons">
+            <a href="#" class="login"><span class="tablet-hide">Login</span></a>
+            <a href="#" class="chat">Live Chat</a>
+            <div class="login-popup">
+                <form action="" method="post">
+                    <div class="login-inner">
+                        <input name="email" type="text" placeholder="Login (Email)" />
+                        <input name="pass" type="password" placeholder="&#9679;&#9679;&#9679;&#9679;&#9679;" />
+                        <div class="button blue">
+                            <a href="#">ENTER</a>
+                        </div>
+                        <a class="forgot" href="#">forgot password?</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="phones">
+            <span class="us">1-888-369-5603</span>
+            <span class="uk">44-20-7183-0318</span>
+            <span class="au">61-28-014-8214</span>
+        </div>
+
+    </div>
+    <div class="top_menu inactive">
+        <div class="container">
+            <ul class="navigation clearfix">
+                <li class="l1"><a href="#">Home</a></li>
+                <li class="l2"><a href="#">Services</a></li>
+                <li class="l3"><a href="#">Prices</a></li>
+                <li class="l4"><a href="#">Discounts</a></li>
+                <li class="desktop l6"><a href="#">Samples</a></li>
+                <li class="desktop l7"><a href="#">FAQ</a></li>
+                <li class="desktop l8"><a href="#">About us</a></li>
+                <li class="desktop l9"><a href="#">Contacts</a></li>
+                <li class="order l10"><a href="#">ORDER NOW</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="s-content profile clearfix">
+<div class="container">
+<div class="leftsidebar">
+    <div id="left-block">
+        <ul class="menu">
+            <li class="menu__title">
+                My personal area
+            </li>
+            <li class="">
+                <a href="/customer/orders">
+                    Dashboard                </a>
+            </li>
+            <li class="">
+                <a href="/customer/preferred">
+                    My preferred writers                </a>
+            </li>
+            <li class="">
+                <a href="/customer/profile">
+                    My profile                </a>
+            </li>
+            <li class="">
+                <a href="/customer/discounts">
+                    My discounts                </a>
+            </li>
+            <li class="">
+                <a href="/customer/identity">
+                    Identity verification                </a>
+            </li>
+            <li class="">
+                <a href="/customer/affilate">
+                    Affilate program                </a>
+            </li>
+            <li class="">
+                <a href="/customer/credit">
+                    My store credit                </a>
+            </li>
+            <li class="">
+                <a href="/customer/membership">
+                    Membership                </a>
+            </li>
+            <li class="">
+                <a href="/customer/helpful_extras">
+                    <span style="font-style:italic;font-weight:bold;color:red;">NEW!</span> Helpful Extras                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+<div class="centersidebar customer">
+<div class="contentBlock">
+<script type="text/javascript">
+    IdentityEvents = {
+        current : null,
+        small : null,
+        leftOffset: 0,
+        topOffset: 0,
+        leftOffsetAnimate: 0,
+        topOffsetAnimate: 0,
+
+        show : function(event)
+        {
+            if (IdentityEvents.current != null)
+            {
+                IdentityEvents.hide();
+            }
+            IdentityEvents.small = $this = $(this);
+            $this.css('visibility', 'hidden');
+            $content = $('#content');
+            IdentityEvents.current = $big = $('#' + $this.attr('alt'));
+            width = $big.width();
+            height = $big.height();
+            $big.css({
+                left  : ($this.offset().left - IdentityEvents.leftOffset) + 'px',
+                top   : ($this.offset().top - IdentityEvents.topOffset) + 'px',
+                width : $this.width() + 'px',
+                height: $this.height() + 'px'
+            });
+            $big.animate(
+                    {
+                        left: (($(window).width() - width) / 2 - IdentityEvents.leftOffsetAnimate)  + 'px',
+                        top : ($(document).scrollTop() + ($(window).height() - height) / 2 - IdentityEvents.topOffsetAnimate) + 'px',
+                        width: width + 'px',
+                        height: height + 'px'
+                    }, 200, function(){ });
+
+            if (event.stopPropagation) {
+                event.stopPropagation();
+            } else {
+                event.cancelBubble = true;
+            }
+
+            $('body').click(IdentityEvents.hide);
+        },
+        hide : function()
+        {
+            $('table.identity-verification img').unbind('click');
+            IdentityEvents.current.stop();
+            IdentityEvents.current.animate(
+                    {
+                        left: IdentityEvents.small.offset().left - IdentityEvents.leftOffset + 'px',
+                        top : IdentityEvents.small.offset().top - IdentityEvents.topOffset + 'px',
+                        width: IdentityEvents.small.width() + 'px',
+                        height: IdentityEvents.small.height() + 'px'
+                    }, 200, function(){
+                        $('table.identity-verification img').css('visibility', 'visible');
+                        $('.big-images').css({left: '-1000px', top: '-1000px', width: '', height: ''});
+                        IdentityEvents.init();
+                    });
+
+            IdentityEvents.current = null;
+            $('body').unbind('click');
+        },
+        init : function()
+        {
+            $('table.identity-verification img')
+                    .css('cursor', 'pointer')
+                    .click(IdentityEvents.show);
+        }
+    }
+    $(document).ready(function(){
+        IdentityEvents.init();
+    });
+</script>
+<script>
+    $(document).ready(function() {
+        $('#userfile').bind('change', function() {
+
+            if(this.files[0].size > 10485760)
+            {
+                $('#error_max_size').show();
+            }
+
+        });
+    });
+</script>
+<h1>Why should I pass identity verification?</h1>
+<ol class="mar10">
+    <li>
+        To protect you from unauthorized billing activities you need to verify that you are the true owner or authorized user of the card.
+    </li>
+    <li>
+        All the details you provide to us during the verification process will not be used for any other purpose and will never be shared with a third party.
+    </li>
+    <li>
+        Preventing unauthorized billing activity saves us from dealing with fraudulent purchases and we pass that savings on to you.
+    </li>
+</ol>
+<hr>
+<p class="s-content__text">
+    You can verify your order in one of the following ways:
+</p>
+<h1>Call us</h1>
+<table class="inline f14">
+    <tbody><tr>
+        <td>
+            <img src="https://www.superiorpapers.com/images/2/16usa.png" alt="usa">
+        </td>
+        <td>
+            US (Toll free):
+        </td>
+        <td>
+            <strong>
+                1-888-296-9266
+            </strong>
+        </td>
+        <td rowspan="3" width="200" align="right" style="font-size: 13px;">
+            <strong>Have a question?</strong>
+            <br>
+            <br>
+            <!-- BoldChat Live Chat Button HTML v4.00 (Type=HTML,ChatWindow=My Chat Window,Department=- None -,Website=- None -) -->
+            <a href="https://livechat.boldchat.com/aid/161178856198874968/bc.chat?resize=true&amp;cwdid=7651072241821237921" target="_blank" onclick="window.open((window.pageViewer &amp;&amp; pageViewer.link || function(link){return link;})(this.href + (this.href.indexOf('?')>=0 ? '&amp;' : '?') + 'url=' + escape(document.location.href)), 'Chat7499213535555282425', 'toolbar=0,scrollbars=1,location=0,statusbar=0,menubar=0,resizable=1,width=640,height=480');return false;">
+                <script language="JavaScript" type="text/javascript"> document.write(unescape('%3Cscript language="JavaScript" type="text/javascript" src="' + (('https:' == document.location.protocol) ? 'https:' : 'http:') + '//cbi.boldchat.com/aid/161178856198874968/bc.cbhs"%3E%3C/script%3E')); </script><script language="JavaScript" type="text/javascript" src="https://cbi.boldchat.com/aid/161178856198874968/bc.cbhs"></script>
+                <script language="JavaScript" type="text/javascript"> bt_showChatHTML('',''); </script>
+                <noscript></noscript>
+                <img src="https://www.superiorpapers.com/images/2/live-chat.png" border="0" alt="Live chat" onclick="_gaq.push(['_trackEvent', 'account_verification', 'live_chat', '']);">
+
+            </a>
+            <!-- /BoldChat Live Chat Button HTML v4.00 -->
+        </td>
+    </tr>
+    <tr>
+        <td width="50">
+            <img src="https://www.superiorpapers.com/res/img/2/16gb.png" alt="uk">
+
+        </td>
+        <td width="100">
+            UK:
+        </td>
+        <td width="150">
+            <strong>
+                44-20-0222-7760            </strong>
+        </td>
+    </tr>
+    </tbody></table>
+<hr>
+<h1>Submit documents</h1>
+<div class="s-content__text">Upload one of the following documents (as .tif, .gif, .jpg, etc) to Customer service center:</div>
+<ul class="dash">
+    <li class="s-content__text">
+        photo-copy of your credit card
+    </li>
+    <li class="s-content__text">
+        photo-copy of your Passport (or visa copy for international students)
+    </li>
+    <li class="s-content__text">
+        photo-copy of your official ID: it can be your Driver's License of other government issued ID (not
+        available for UK customers)
+    </li>
+</ul>
+
+<div id="error_max_size" style="margin-left: 25px; color: #FF0000; display:none;"> <b> Your file should not exceed 10 Mb </b> </div>
+<form action="/customer/identity.upload/" method="post" enctype="multipart/form-data" name="upload_form" class="upload-form">
+    <label for="userfile">File:</label>
+    <input type="hidden" name="MAX_FILE_SIZE" value="10485760">
+    <input type="file" name="userfile" id="userfile">
+    <input type="submit" name="submit" value="Submit file" class="button--red  button__order">
+</form>
+<p class="s-content__text">
+    <br>
+    <strong>Not sure what documents to upload? View the samples:</strong>
+</p>
+<table class="inline align-center identity-verification">
+
+    <tbody><tr>
+        <td>
+            <img src="https://www.superiorpapers.com/res/img/2/credit-card-min.jpg" alt="iv-credit-card" style="cursor: pointer;">
+        </td>
+        <td>
+            <img src="https://www.superiorpapers.com/res/img/2/passport-min.jpg" alt="iv-passport" style="cursor: pointer;">
+        </td>
+        <td>
+            <img src="https://www.superiorpapers.com/res/img/2/driver-license-min.jpg" alt="iv-driver-license" style="cursor: pointer;">
+        </td>
+        <td>
+            <img src="https://www.superiorpapers.com/res/img/2/visa-min.jpg" alt="iv-visa" style="cursor: pointer;">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Credit card
+        </td>
+        <td>
+            Passport
+        </td>
+        <td>
+            Driver license
+        </td>
+        <td>
+            Visa
+        </td>
+    </tr>
+    </tbody></table>
+<hr>
+<h1>Confirm the authorization code</h1>
+<ol class="simple mar5 s-content__text">
+    <li>
+        Call your bank/credit card company and inquire about the Authorization Code for the transaction under the name WRITING SERVICES.<br>
+        Authorization Code is a 6-7 digit code, which consists of numbers (examples - 281435; 0015154) or combination of numbers and a letter (examples - 0r61145; 005525c);
+    </li>
+    <li>
+        Once you have the required information, confirm the Authorization Code by contacting Customer Support (e-mail, message, call, chat).
+    </li>
+</ol>
+<img id="iv-credit-card" src="https://www.superiorpapers.com/res/img/2/credit-card.jpg" alt="" class="big-images">
+<img id="iv-passport" src="https://www.superiorpapers.com/res/img/2/passport.jpg" alt="" class="big-images">
+<img id="iv-driver-license" src="https://www.superiorpapers.com/res/img/2/driver-license.jpg" alt="" class="big-images">
+<img id="iv-visa" src="https://www.superiorpapers.com/res/img/2/visa.jpg" alt="" class="big-images">
+</div>
+</div>
+</div>
+
+</div>
+<div class="footer">
+    <div class="container">
+        <div class="footMenu">
+            <a href="#policy">Privacy policy</a>
+            <a href="#terms">Terms and Conditions</a>
+            <a href="#promise">Our Promise</a>
+            <a href="#sitemap">Sitemap</a>
+            <a href="#contacts">Contacts</a>
+        </div>
+        <div class="fInner">
+            <div class="socials">
+                <iframe class="fbButton" src="http://www.facebook.com/plugins/like.php?locale=en_US&amp;href=http%3A%2F%2Fwww.superiorpapers.com%2F&amp;width&amp;layout=button_count&amp;action=like&amp;show_faces=true&amp;share=false&amp;height=21" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+                <div class="g-plusone" data-size="medium" data-href="http://www.superiorpapers.com/"></div>
+            </div>
+            <img src="img/cards.png" class="payments mobile-hide" alt="All payments are securely processed by Authorize.Net, Security Metrics: Credit Card SAFE, VISA, MasterCard, Discover, Maestro, American Express, Wire Transfer">
+            <img src="img/cards_mobile.png" class="payments mobile-visible" alt="All payments are securely processed by Authorize.Net, Security Metrics: Credit Card SAFE, VISA, MasterCard, Discover, Maestro, American Express, Wire Transfer">
+            <div class="disclaimer">
+                DISCLAMER: The company is providing custom writing and research services to its clients for limited use only as provided its Term and Conditions. Itdoes not give its consent or authority to the client to copry and reproduse entirely or a portion of any term paper, research paper, thesis, essay, dissertation or other products of the Company without proper reference. Furthermore, the Company will not be responsible to third parties for the unauthorized use of its produst.
+                <div class="copy">Copyright 1997-2014 <span>SuperiorPapers.com</span></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
